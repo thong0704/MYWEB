@@ -80,7 +80,7 @@ $(document).ready(function () {
           $("#w_update").css("top",e.pageY +5);
           var $idloaihang = $(this).attr('value');
           
-          $("#w_update_form").load("./element_HTH/mloaihang/loaihangUpdate.php", {idloaihang:$idloaihang}, function (response, status, request) {
+          $("#w_update_form").load("./element_T/mloaihang/loaihangUpdate.php", {idloaihang:$idloaihang}, function (response, status, request) {
                this; // dom element     
           });
           $("#w_update").show();
@@ -88,6 +88,42 @@ $(document).ready(function () {
      $("#w_close_btn").click(function(e){
           e.preventDefault();
           $("#w_update").hide();
+     });
+
+
+     $("#w_update_th").hide();//close
+     $(".w_update_btn_open_th").click(function(e){
+          e.preventDefault();
+          $("#w_update_th").css("left",e.pageX +5);
+          $("#w_update_th").css("top",e.pageY +5);
+          var $idthuonghieu = $(this).attr('value');
+          
+          $("#w_update_form_th").load("./element_T/mThuonghieu/thuonghieuUpdate.php", {idthuonghieu:$idthuonghieu}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_th").show();
+     });
+     $("#w_close_btn_th").click(function(e){
+          e.preventDefault();
+          $("#w_update_th").hide();
+     });
+
+
+     $("#w_update_tt").hide();//close
+     $(".w_update_btn_open_tt").click(function(e){
+          e.preventDefault();
+          $("#w_update_tt").css("left",e.pageX +5);
+          $("#w_update_tt").css("top",e.pageY +5);
+          var $idthuoctinh = $(this).attr('value');
+          
+          $("#w_update_form_tt").load("./element_T/mthuoctinh/thuoctinhUpdate.php", {idthuoctinh:$idthuoctinh}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_tt").show();
+     });
+     $("#w_close_btn_tt").click(function(e){
+          e.preventDefault();
+          $("#w_update_tt").hide();
      });
      
    
@@ -99,7 +135,7 @@ $(document).ready(function () {
           $("#w_update_hh").css("top",e.pageY +5);
           var $idhanghoa = $(this).attr('value');
           
-          $("#w_update_form_hh").load("./element_HTH/mHanghoa/hanghoaUpdate.php", {idhanghoa:$idhanghoa}, function (response, status, request) {
+          $("#w_update_form_hh").load("./element_T/mHanghoa/hanghoaUpdate.php", {idhanghoa:$idhanghoa}, function (response, status, request) {
                this; // dom element     
           });
           $("#w_update_hh").show();
