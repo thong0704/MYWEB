@@ -3,12 +3,10 @@ $s = '../../element_T/mod/database.php';
 if (file_exists($s)) {
     $f = $s;
 } else {
-    $f='./elements_T/mod/database.php';
-    if(!file_exists($f)){
-        $f = './administrator/elements_T/mod/database.php';
-    }
+    $f = 'administrator/element_T/mod/database.php';
 }
 require_once ($f);
+
 
 
     class loaihang extends Database{
@@ -63,4 +61,7 @@ require_once ($f);
 
             return $getTk->fetch();
         }
+
+        
+     
     }

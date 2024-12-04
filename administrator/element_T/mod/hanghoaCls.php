@@ -3,7 +3,7 @@ $s = '../../element_T/mod/database.php';
 if (file_exists($s)) {
     $f = $s;
 } else {
-    $f = './element_T/mod/database.php';
+    $f = 'administrator/element_T/mod/database.php';
 }
 
 require_once ($f);
@@ -54,7 +54,6 @@ require_once ($f);
     
        
         
-
         public function hanghoaGetbyId($idhanghoa) {
             $getTk = $this->connect->prepare("select * from hanghoa where idhanghoa=?");
             $getTk->setFetchMode(PDO::FETCH_OBJ);
@@ -62,6 +61,15 @@ require_once ($f);
 
             return $getTk->fetch();
         }
+        public function HanghoaGetbyIdloaihang($idloaihang){
+            $sql = 'select * from hanghoa where idloaihang = ?';
+            $data = array($idloaihang);
+            $getOne = $this->connect->prepare($sql);
+            $getOne ->setFetchMode(PDO::FETCH_OBJ);
+            $getOne->execute($data);
+            return $getOne->fetchAll();
+         }
+    
     }
     
 
