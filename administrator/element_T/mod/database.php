@@ -6,11 +6,10 @@ class Database{
         $servername = $init["servername"];
         $dbname = $init["dbname"];
         $username = $init["username"];
-        $password = $init["pass"];
+        $password = $init["password"];
         $opt = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ);
         $this->connect = new PDO(dsn: "mysql:host=$servername;dbname=$dbname;charset=utf8",$username,$password,$opt);
-        $this->connect = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password, $opt);
-
+       
     }
 }
 /*$init = parse_ini_file("config.ini");
