@@ -1,5 +1,5 @@
 <?php
-    require './administrator/element_T/mod/hanghoaCls.php';
+    require 'administrator/element_T/mod/hanghoaCls.php';
     $hanghoa = new hanghoa();
     if(isset($_GET['reqView'])){
         $idloaihang = $_GET['reqView'];
