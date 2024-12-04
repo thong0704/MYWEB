@@ -6,7 +6,7 @@ class Database{
         $servername = $init["servername"];
         $dbname = $init["dbname"];
         $username = $init["username"];
-        $password = $init["password"];
+        $password = $init["pass"];
         $opt = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ);
         $this->connect = new PDO(dsn: "mysql:host=$servername;dbname=$dbname;charset=utf8",$username,$password,$opt);
        
