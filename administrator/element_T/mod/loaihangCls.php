@@ -3,7 +3,10 @@ $s = '../../element_T/mod/database.php';
 if (file_exists($s)) {
     $f = $s;
 } else {
-    $f = './element_T/mod/database.php';
+    $f='./elements_T/mod/database.php';
+    if(!file_exists($f)){
+        $f = './administrator/elements_T/mod/database.php';
+    }
 }
 
 require_once ($f);
