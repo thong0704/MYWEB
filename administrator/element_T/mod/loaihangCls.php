@@ -8,7 +8,6 @@ if (file_exists($s)) {
         $f = './administrator/elements_T/mod/database.php';
     }
 }
-
 require_once ($f);
 
 
