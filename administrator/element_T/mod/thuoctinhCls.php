@@ -19,9 +19,9 @@ class thuoctinh extends Database{
         return $getAll->fetchAll();
     }
     
-    public function thuoctinhAdd($tenthuoctinh,$hinhanh){
-        $sql = "INSERT INTO thuoctinh (tenthuoctinh,hinhanh) VALUES (?,?)";
-        $data = array($tenthuoctinh,$hinhanh);
+    public function thuoctinhAdd($tenthuoctinh,$hinhanh,$mota){
+        $sql = "INSERT INTO thuoctinh (tenthuoctinh,hinhanh,mota) VALUES (?,?,?)";
+        $data = array($tenthuoctinh,$hinhanh,$mota);
         $add = $this->connect->prepare($sql);
         $add->execute($data);
         return $add->rowCount();
@@ -35,9 +35,9 @@ class thuoctinh extends Database{
 
         return $del->rowCount();
     }
-    public function thuoctinhUpdate($tenthuoctinh,$hinhanh,$idthuoctinh){
-        $sql = "UPDATE thuoctinh set tenthuoctinh = ?, hinhanh= ? WHERE idthuoctinh = ? ";
-        $data = array($tenthuoctinh,$hinhanh,$idthuoctinh);
+    public function thuoctinhUpdate($tenthuoctinh,$hinhanh,$mota,$idthuoctinh){
+        $sql = "UPDATE thuoctinh set tenthuoctinh = ?, hinhanh= ?, mota= ? WHERE idthuoctinh = ? ";
+        $data = array($tenthuoctinh,$hinhanh,$mota,$idthuoctinh);
         $update = $this->connect->prepare($sql);
         $update->execute($data);
         return $update->rowCount();
