@@ -9,16 +9,7 @@
         <li><a href="index.php?reqact=hanghoaview">Hàng hóa</a> </li>
         <li><a href="index.php?reqact=thuoctinhview">Thuộc tính</a> </li>
         <li><a href="index.php?reqact=thuonghieuview">Thương hiệu</a> </li>
-       
-    </ul>
-</div>
-<div class="cateOrder">
-    <a href="#">Cấp số A</a>
-</div>
-<div class="itemOrder">
-    <ul>
-        <li><a href="#">Nội dung A1</a> </li>
-        <li><a href="#">Nội dung A2</a> </li>
-        <li><a href="#">Nội dung A3</a> </li>
-    </ul>
+        <li><a href="index.php?reqact=dongiaview">Đơn giá</a> </li>
+        <li><a href="index.php?reqact=thuoctinhhanghoaview">Thuộc tính hàng hóa</a> </li>
+    
 </div>

@@ -42,6 +42,7 @@
             <th>Tên thuộc tính</th>
             <th>Mô tả</th>
             <th>Hình ảnh</th>
+            <th>Chức năng</th>
         </thead>
         <?php
         if($l > 0){

@@ -126,6 +126,23 @@ $(document).ready(function () {
           $("#w_update_tt").hide();
      });
      
+     $("#w_update_dg").hide();//close
+     $(".w_update_btn_open_dg").click(function(e){
+          e.preventDefault();
+          $("#w_update_dg").css("left",e.pageX +5);
+          $("#w_update_dg").css("top",e.pageY +5);
+          var $iddongia = $(this).attr('value');
+          
+          $("#w_update_form_dg").load("./element_T/mDongia/dongiaUpdate.php", {iddongia:$iddongia}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_dg").show();
+     });
+     $("#w_close_btn_dg").click(function(e){
+          e.preventDefault();
+          $("#w_update_dg").hide();
+     });
+     
    
      
      $("#w_update_hh").hide();//close
@@ -145,5 +162,23 @@ $(document).ready(function () {
      $("#w_close_btn_hh").click(function(e){
           e.preventDefault();
           $("#w_update_hh").hide();
+     });
+     $("#w_update_tthh").hide();//close
+     $(".w_update_btn_open_tthh").click(function(e){
+          e.preventDefault();
+          $("#w_update_tthh").css("left",e.pageX +5);
+          $("#w_update_tthh").css("top",e.pageY +5);
+          var $idthuoctinhhanghoa = $(this).attr('value');
+          
+          $("#w_update_form_tthh").load("./element_T/mThuoctinhhanghoa/thuoctinhhanghoaUpdate.php", {idthuoctinhhanghoa:$idthuoctinhhanghoa}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_tthh").show();
+     });
+     
+     
+     $("#w_close_btn_tthh").click(function(e){
+          e.preventDefault();
+          $("#w_update_tthh").hide();
      });
 });

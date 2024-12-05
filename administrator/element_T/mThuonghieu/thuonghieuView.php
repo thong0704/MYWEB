@@ -42,6 +42,7 @@
             <th>Tên thương hiệu</th>
             <th>Xuất xứ</th>
             <th>Hình ảnh</th>
+            <th>Chức năng</th>
         </thead>
         <?php
         if($l > 0){

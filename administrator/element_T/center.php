@@ -20,6 +20,13 @@
             case'thuonghieuview':
                 require "./element_T/mthuonghieu/thuonghieuView.php";
                 break;
+            case'dongiaview':
+                require "./element_T/mdongia/dongiaView.php";
+                break;
+            case'thuoctinhhanghoaview':
+                require "./element_T/mThuoctinhhanghoa/thuoctinhhanghoaView.php";
+                break;
+           
             }
         }
     else{

@@ -9,8 +9,7 @@
 </head>
 <body>
     <div id="lvOne">
-       
-    </div>
+    
     <div id="lvTwo">
         <?php 
             require './apart/menuLoaihang.php';
@@ -19,12 +18,10 @@
     <div id="lvThree">
         <?php 
             if(!isset($_GET['reqHanghoa'])){
-                require './apart/viewListLoaihang.php';
+                require 'apart/viewListLoaihang.php';
             }else{
                 require './apart/viewHanghoa.php';
             }
         ?>
-
-    </div>
 </body>
 </html>
