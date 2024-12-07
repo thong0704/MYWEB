@@ -75,6 +75,9 @@ class hanghoa extends Database {
         return $getOne->fetchAll();
     }
     
+
+        // Các phương thức khác...
+    
     
 }
 ?>

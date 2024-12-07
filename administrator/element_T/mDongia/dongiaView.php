@@ -52,59 +52,50 @@
     <hr/>
 </div>
 <?php
- require './element_T/mod/dongiaCls.php';
- $hhObj = new dongia();
- $list_hh = $hhObj->dongiaGetAll();
- $l = count($list_hh);
+require './element_T/mod/dongiaCls.php';
+$hhObj = new dongia();
+$list_hh = $hhObj->dongiaGetAll();
+$l = count($list_hh);
 ?>
 <div class="title_dongia">Danh sách đơn giá</div>
 <div class="content_dongia">
     Trong bảng có: <b><?php echo $l; ?></b>
     <table border="solid">
         <thead>
-            <th>id</th>
+            <th>ID</th>
             <th>Giá trị đơn giá</th>
             <th>Ngày bắt đầu</th>
             <th>Ngày kết thúc</th>
             <th>Áp dụng</th>
             <th>Chức năng</th>
-
         </thead>
+        <tbody>
         <?php
         if ($l > 0) {
             foreach ($list_hh as $v) {
+        
                 ?>
                 <tr>
-                    <td><?php echo $v->iddongia; ?></td>
+                    <td><?php echo isset($v->iddongia) ? $v->iddongia : 'N/A'; ?></td>
                     <td><?php echo $v->giatridongia; ?></td>
                     <td><?php echo $v->ngaybatdau; ?></td>
                     <td><?php echo $v->ngayketthuc; ?></td>
                     <td align="center">
-                        <?php if( $v->apdung==1){
-                        ?>
+                        <?php if ($v->apdung == 1) { ?>
                             <img src="./img_T/success.png" class="iconimg">
-                        <?php
-                    }else{
-                        ?>
-                        <img src="./img_T/fail.png" class="iconimg">
-                    <?php
-                    } ?>
+                        <?php } else { ?>
+                            <img src="./img_T/fail.png" class="iconimg">
+                        <?php } ?>
                     </td>
-                    
                     <td align="center">
-                        <?php
-                        if (isset($_SESSION['ADMIN'])) {
-                            ?>
-                            <a href="./element_T/mDongia/dongiaAct.php?reqact=deletedongia&iddongia=<?php echo $v->iddongia; ?>">
+                        <?php if (isset($_SESSION['ADMIN'])) { ?>
+                            <a href="./element_T/mDongia/dongiaAct.php?reqact=deletedongia&iddongia=<?php echo isset($v->iddongia) ? $v->iddongia : 'N/A'; ?>">
                                 <img src="./img_T/delete.png" class="iconimg">
                             </a>
-                            <?php
-                        } else {
-                            ?>
+                        <?php } else { ?>
                             <img src="./img_T/delete.png" class="iconimg">
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
+
                         <img height="20px" src="./img_T/update.png" class="w_update_btn_open_dg" value="<?php echo $v->iddongia; ?>">
                     </td>
                 </tr>

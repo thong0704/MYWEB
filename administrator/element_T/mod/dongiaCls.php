@@ -35,7 +35,7 @@ class dongia extends Database {
         return $del->rowCount();
     }
 
-    public function dongiaUpdate($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa) {
+    public function dongiaUpdate($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa, $iddongia) {
         $update = $this->connect->prepare(
             "UPDATE dongia SET 
                 giatridongia = ?, 
@@ -46,7 +46,7 @@ class dongia extends Database {
             WHERE iddongia = ?"
         );
 
-        $update->execute(array($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa));
+        $update->execute(array($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa, $iddongia ));
         return $update->rowCount();
     }
 

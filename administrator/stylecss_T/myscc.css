@@ -216,3 +216,63 @@ a{
     background-color: whitesmoke;
 
 }
+#w_update_ctn{
+    position: absolute;
+    z-index: 1;
+    min-width: 400px;
+    min-height: 100px;
+    border: 10px;
+    border-radius: 10px;
+    -webkit-border-radius:10x;
+    -moz-border-radius:10x;
+    -ms-border-radius:10x;
+    -o-border-radius:10x;
+    box-shadow: 10px 10px gainsboro;
+    background-color: whitesmoke;
+
+}
+#w_update_cttn{
+    position: absolute;
+    z-index: 1;
+    min-width: 400px;
+    min-height: 100px;
+    border: 10px;
+    border-radius: 10px;
+    -webkit-border-radius:10x;
+    -moz-border-radius:10x;
+    -ms-border-radius:10x;
+    -o-border-radius:10x;
+    box-shadow: 10px 10px gainsboro;
+    background-color: whitesmoke;
+
+}
+#w_update_ctx{
+    position: absolute;
+    z-index: 1;
+    min-width: 400px;
+    min-height: 100px;
+    border: 10px;
+    border-radius: 10px;
+    -webkit-border-radius:10x;
+    -moz-border-radius:10x;
+    -ms-border-radius:10x;
+    -o-border-radius:10x;
+    box-shadow: 10px 10px gainsboro;
+    background-color: whitesmoke;
+
+}
+#w_update_cttx{
+    position: absolute;
+    z-index: 1;
+    min-width: 400px;
+    min-height: 100px;
+    border: 10px;
+    border-radius: 10px;
+    -webkit-border-radius:10x;
+    -moz-border-radius:10x;
+    -ms-border-radius:10x;
+    -o-border-radius:10x;
+    box-shadow: 10px 10px gainsboro;
+    background-color: whitesmoke;
+
+}

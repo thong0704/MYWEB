@@ -41,17 +41,18 @@ session_start();
 
                 
                 
-                        case 'updatehanghoa':
+                        case 'updatedongia':
                             $giatridongia = $_REQUEST['giatridongia'];
                             $apdung = $_REQUEST['apdung'];
                             $ngaybatdau = $_REQUEST['ngaybatdau'];               
                             $ngayketthuc = $_REQUEST['ngayketthuc'];
+                            $iddongia = $_REQUEST['iddongia'];
                             $idhanghoa = $_REQUEST['idhanghoa'];
 
                 
                             $lh = new dongia();
                             try {
-                                $kq = $lh->dongiaUpdate($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa );
+                                $kq = $lh->dongiaUpdate($giatridongia, $apdung, $ngaybatdau, $ngayketthuc, $idhanghoa, $iddongia );
                                 if ($kq) {
                                     header('location:../../index.php?req=dongiaview&result=ok');
                                 } else {

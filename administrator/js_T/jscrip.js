@@ -163,6 +163,8 @@ $(document).ready(function () {
           e.preventDefault();
           $("#w_update_hh").hide();
      });
+
+     
      $("#w_update_tthh").hide();//close
      $(".w_update_btn_open_tthh").click(function(e){
           e.preventDefault();
@@ -180,5 +182,83 @@ $(document).ready(function () {
      $("#w_close_btn_tthh").click(function(e){
           e.preventDefault();
           $("#w_update_tthh").hide();
+     });
+
+
+     $("#w_update_ctn").hide();//close
+     $(".w_update_btn_open_ctn").click(function(e){
+          e.preventDefault();
+          $("#w_update_ctn").css("left",e.pageX +5);
+          $("#w_update_ctn").css("top",e.pageY +5);
+          var $idchungtunhap = $(this).attr('value');
+
+          $("#w_update_form_ctn").load("./element_T/mChungtunhap/chungtunhapUpdate.php", {idchungtunhap:$idchungtunhap}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_ctn").show();
+     });
+     
+     
+     $("#w_close_btn_ctn").click(function(e){
+          e.preventDefault();
+          $("#w_update_ctn").hide();
+     });
+
+
+
+     $("#w_update_cttn").hide();//close
+     $(".w_update_btn_open_cttn").click(function(e){
+          e.preventDefault();
+          $("#w_update_cttn").css("left",e.pageX +5);
+          $("#w_update_cttn").css("top",e.pageY +5);
+          var $idchitietchungtunhap = $(this).attr('value');
+
+          $("#w_update_form_cttn").load("./element_T/mChitietchungtunhap/chitietchungtunhapUpdate.php", {idchitietchungtunhap:$idchitietchungtunhap}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_cttn").show();
+     });
+     $("#w_close_btn_cttn").click(function(e){
+          e.preventDefault();
+          $("#w_update_cttn").hide();
+     });
+
+
+     $("#w_update_ctx").hide();//close
+     $(".w_update_btn_open_ctx").click(function(e){
+          e.preventDefault();
+          $("#w_update_ctx").css("left",e.pageX +5);
+          $("#w_update_ctx").css("top",e.pageY +5);
+          var $idchungtuxuat = $(this).attr('value');
+
+          $("#w_update_form_ctx").load("./element_T/mChungtuxuat/chungtuxuatUpdate.php", {idchungtuxuat:$idchungtuxuat}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_ctx").show();
+     }); 
+     $("#w_close_btn_ctx").click(function(e){
+          e.preventDefault();
+          $("#w_update_ctx").hide();
+     });
+
+
+
+     $("#w_update_cttx").hide();//close
+     $(".w_update_btn_open_cttx").click(function(e){
+          e.preventDefault();
+          $("#w_update_cttx").css("left",e.pageX +5);
+          $("#w_update_cttx").css("top",e.pageY +5);
+          var $idchitietchungtuxuat = $(this).attr('value');
+
+          $("#w_update_form_cttx").load("./element_T/mChitietchungtuxuat/chitietchungtuxuatUpdate.php", {idchitietchungtuxuat:$idchitietchungtuxuat}, function (response, status, request) {
+               this; // dom element     
+          });
+          $("#w_update_cttx").show();
+     });
+     
+     
+     $("#w_close_btn_cttx").click(function(e){
+          e.preventDefault();
+          $("#w_update_cttx").hide();
      });
 });

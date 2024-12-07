@@ -15,7 +15,7 @@ require '../mod/hanghoaCls.php';
 $thObj = new hanghoa();
 $list_th = $thObj->hanghoaGetAll();
 ?>
-<div class="title_mod">Thuôcj tính hàng hóa mới</div>
+<div class="title_mod">Thuộc tính hàng hóa mới</div>
 <div class="content_mod">
     <form name="updatethuoctinhhanghoa" id="formupdate" method="post" action="./element_T/mThuoctinhhanghoa/thuoctinhhanghoaAct.php?reqact=updatethuoctinhhanghoa" enctype="multipart/form-data">
         <input type="hidden" name="idthuoctinhhanghoa" value="<?php echo $gettthhUpdate->idthuoctinhhanghoa; ?>"/>
@@ -58,6 +58,10 @@ $list_th = $thObj->hanghoaGetAll();
                     }
                     ?>
                 </td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="btnsubmit" value="Cập nhật" size="50"/></td>
+                <td><input type="reset" value="Làm lại"/><b id="noteForm"></b></td>
             </tr>
         </table>
     </form>
