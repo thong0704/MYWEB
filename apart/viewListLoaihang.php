@@ -1,13 +1,15 @@
 <?php
 require 'administrator/element_T/mod/hanghoaCls.php';
 $hanghoa = new hanghoa();
+
 if (isset($_GET['reqView'])) {
     $idloaihang = $_GET['reqView'];
     $list_hanghoa = $hanghoa->HanghoaGetbyIdloaihang($idloaihang);
-    $s = count($list_hanghoa);
+} elseif (isset($_GET['reqThuonghieu'])) {
+    $idthuonghieu = $_GET['reqThuonghieu'];
+    $list_hanghoa = $hanghoa->HanghoaGetbyIdthuonghieu($idthuonghieu);
 } else {
     $list_hanghoa = $hanghoa->hanghoaGetAll();
-    $s = count($list_hanghoa);
 }
 ?>
 <div>

@@ -15,9 +15,15 @@
 <div class="itemsViewHanghoa">
     <center>
         <img class="imgViewHanghoa" src="data:image/png;base64,<?php echo $obj->hinhanh ;?>"><br>
-        Sản phẩm : <?php echo $obj->tenhanghoa; ?> <br>
-        Mô tả: <?php echo $obj->mota; ?> <br>
-        Giá bán : <?php echo $obj->giathamkhao; ?> <br>
+        <div class="product-details">
+            <span>Sản phẩm:</span> <?php echo $obj->tenhanghoa; ?> <br>
+        </div>
+        <div class="product-description">
+            <span>Mô tả:</span> <?php echo $obj->mota; ?> <br>
+        </div>
+        <div class="product-price">
+            <span>Giá bán:</span> <?php echo $obj->giathamkhao; ?> <br>
+        </div>
         <button onclick="goBack()">Go back</button>
     </center>
 </div>
